@@ -1,0 +1,213 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "SmallRatio: Dedekind sums along Euclid's algorithm and the small-ratio formula"
+  description: >-
+    For a prime p and 0 < h < p, the Dedekind sum s(h,p) is determined, up to an explicit error of
+    order log p, by the fractions of small height congruent to plus or minus h: with the sum over
+    the coprime pairs u, v >= 1 with uv < p/2, |12 s(h,p) - p sum ([hv = u mod p] - [hv = -u mod p])/(uv)|
+    <= 6n <= 12 log_2 p + 6, where n is the length of Euclid's algorithm on (p, h). Summed over any set
+    H of residues, in particular over a subgroup of odd order, this gives
+    |12 sum_{h in H} s(h,p) - p S_H(p)| <= |H| (12 log_2 p + 6), where S_H(p) is the signed sum of 1/(uv)
+    over the coprime pairs with uv < p/2 and u/v in H or -H. The development proves Dedekind
+    reciprocity from scratch (by counting lattice points), the identities of Euclid's algorithm and
+    the bound n <= 2 log_2 k + 1, the alternating-sum form 12 s(h,k) = sum (-1)^{j+1} k/(r_j q_{j-1}) + E
+    with |E| <= 4n, and Legendre's pairing of the small coprime pairs with the steps of the algorithm,
+    by a lattice-basis argument instead of continued fractions.
+  authors:
+    - "Joseph S. Farland"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Joseph S. Farland"
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11F20", "11A55", "11M20", "68V20"]
+
+sources:
+  - title: "The small-ratio formula for Dedekind sums, formalized in Lean"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Preprint, Zenodo, 2026"
+    relationship: "formalizes"
+    note: >-
+      The companion paper of this formalization, by the same author. It restates the formalized
+      results with proofs that follow the formal ones, and gives the correspondence between the
+      manuscript, the paper and the Lean names.
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "Mean squares of Dirichlet L-functions at s=1 over characters of fixed order and over subgroups"
+    authors:
+      - "Joseph S. Farland"
+    type: "article"
+    location: "Unpublished manuscript, 2026"
+    relationship: "formalizes"
+    note: >-
+      Same author. Formalized: the identities of Euclid's algorithm before Lemma 5.12, Lemma 5.12,
+      Lemma 5.13 and Theorem 5.14 in its Dedekind-sum form, 12 sum_{h in H} s(h,p) = p S_H(p) + O(|H| log p).
+      Not formalized: Proposition 5.1 (the exact formula M(p,H) = (2 pi^2/p) sum_{h in H} s(h,p), due to
+      Walum and to Louboutin and Munsch), which turns the Dedekind-sum form into the stated form
+      M(p,H) = (pi^2/6) S_H(p) + O(log p/m); Proposition 5.15 and Theorem 5.16 (Burgess' bound); the
+      rest of the manuscript. On novelty: Lemma 5.12 is a reformulation of the Barkan-Hickerson-Knuth
+      formula, obtained, as by Hall and Huxley, by iterating reciprocity; Lemma 5.13 is Legendre's
+      theorem on convergents; the per-pair approximation s(h,k) ~ k/(12uv) is known (Conrey,
+      Fransen, Klein and Scott, Lemma 2; Girstmair 2003, Theorem 3(b)). The summed form with the exact
+      cut uv < p/2, the explicit error and the subgroup sum S_H(p) were not found in these sources or in
+      Munsch and Shparlinski (Forum Math. 38 (2026)), whose identity (5.3) in its second-moment case (their k = 1, k indexing the moment) is a smoothed version.
+    license: "CC-BY-4.0"
+    author_endorsement: "participated"
+  - title: "Dedekind Sums"
+    authors:
+      - "H. Rademacher"
+      - "E. Grosswald"
+    type: "book"
+    location: "Carus Mathematical Monographs 16, Mathematical Association of America, 1972"
+    relationship: "background"
+    note: "Dedekind reciprocity and its lattice-point proof."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "Dedekind sums and continued fractions"
+    authors:
+      - "R. R. Hall"
+      - "M. N. Huxley"
+    type: "article"
+    location: "Acta Arith. 63 (1993), 79-90"
+    relationship: "background"
+    note: "Iterating reciprocity along the convergents; Barkan's evaluation of s(h,k) by partial quotients."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "Zones of large and small values for Dedekind sums"
+    authors:
+      - "K. Girstmair"
+    type: "article"
+    location: "Acta Arith. 109 (2003), 299-308"
+    relationship: "background"
+    note: "The approximation 12 s(m,N) ~ N/(d q) near a fraction of small height."
+    license: "unknown"
+    author_endorsement: "n/a"
+  - title: "Moments and non-vanishing of L-functions over subgroups of optimal index"
+    authors:
+      - "M. Munsch"
+      - "I. E. Shparlinski"
+    type: "article"
+    location: "Forum Math. 38 (2026), 1469-1490; arXiv:2309.10207"
+    relationship: "background"
+    note: "Identity (5.3), a smoothed sum over r = +-lambda s mod p, of which the small-ratio formula is an unsmoothed explicit form for k = 1."
+    license: "unknown"
+    author_endorsement: "n/a"
+
+related_formalizations:
+  - id: "https://doi.org/10.5281/zenodo.23424615"
+    relationship: "builds-on"
+    note: "DedekindSubgroups by the same author. The definitions sawtooth and dedekindSum are copied from it verbatim."
+  - id: "https://isa-afp.org/entries/Dedekind_Sums.html"
+    relationship: "independent"
+    note: "Dedekind sums in Isabelle/HOL (Eberl, Bordg, Paulson and Li, Archive of Formal Proofs, 2025), including reciprocity."
+
+status:
+  scope: >-
+    Formalized: the results listed under alignment. Not formalized: the exact formula
+    M(p,H) = (2 pi^2/p) sum_{h in H} s(h,p) (Proposition 5.1), so the mean square M(p,H) does not appear
+    in the statements; the pointwise approximation through Burgess' bound (Proposition 5.15, Theorem 5.16);
+    Corollary 5.18 and the remarks after Theorem 5.14.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: []
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Claude (Anthropic)"]
+      framework: "Claude.ai with code execution"
+      tool_setup: >-
+        AI-assisted: the Lean code was drafted and repaired by Claude against the manuscript's
+        statements and proofs, compiled locally with lake, and the export of Solution was checked with
+        the Lean kernel, nanoda and con-ron.
+      cost:
+        wall_time: "about one day"
+        spend_usd: "subscription-based"
+        hardware: "API-only plus local machine"
+      prompting_notes: "The model was given the manuscript's statements and proofs and asked to formalize them without sorry or native_decide."
+  spend_usd: "subscription-based"
+  notes: >-
+    The author chose the result. The scope (the Dedekind-sum form, with Proposition 5.1 quoted) and the
+    lattice proof of Legendre's pairing were chosen during formalization to keep the development elementary.
+
+fidelity:
+  divergences: >-
+    The mean square M(p,H) is not defined; Theorem 5.14 is formalized as the bound on
+    12 sum_{h in H} s(h,p) - p S_H(p), which with Proposition 5.1 is the manuscript's statement. The
+    implied constants are explicit: |E| <= 4n in Lemma 5.12, 6n per residue and n <= 2 log_2 p + 1 (the
+    manuscript has 2 log_2 p + 2). H is any finite set of residues modulo p (S_H(p) is defined for it by
+    the manuscript's formula), not only a subgroup of odd order. The convergent denominators are
+    shifted: den k h j = q_{j-1}. Lemma 5.12, the Euclid identities and Lemma 5.13 are proved for every
+    modulus k and 0 < h < k coprime; the coprimality of the pairs (r_j, q_{j-1}) and the small-ratio
+    formula need k prime. Lemma 5.13 is proved by a lattice argument (consecutive vectors
+    (r_j, (-1)^{j+1} q_{j-1}) form a basis of {x = hy mod k}) instead of Legendre's theorem on
+    convergents; uniqueness of j follows from the strict decrease of r_j.
+
+review:
+  status: "self-assessed"
+  reviewers:
+    - "Joseph S. Farland"
+  notes: >-
+    The definitions in Challenge.lean are copied verbatim from the development and compared by
+    Comparator. The statements and the companion paper were checked by an independent AI review, and
+    check/statements.py recomputes every statement numerically. No external referee has reviewed the
+    manuscript or the formalization.
+
+alignment:
+  namespace: "SmallRatio"
+  statements:
+    - source: "Dedekind reciprocity (used in the proof of Lemma 5.12)"
+      lean: "SmallRatio.reciprocity"
+      module: "Challenge"
+      status: "proved"
+    - source: "Euclid's algorithm terminates at r_n = 1 with r strictly decreasing"
+      lean: "SmallRatio.euclid_terminates"
+      module: "Challenge"
+      status: "proved"
+    - source: "The identity r_{j-1} q_{j-1} + r_j q_{j-2} = p before Lemma 5.12"
+      lean: "SmallRatio.euclid_identity"
+      module: "Challenge"
+      status: "proved"
+    - source: "The congruence h q_{j-1} = (-1)^{j+1} r_j mod p before Lemma 5.12"
+      lean: "SmallRatio.euclid_congruence"
+      module: "Challenge"
+      status: "proved"
+    - source: "The bound on n before Lemma 5.12"
+      lean: "SmallRatio.euclid_length"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 5.12 (Dedekind sums along Euclid's algorithm)"
+      lean: "SmallRatio.along_euclid"
+      module: "Challenge"
+      status: "proved"
+    - source: "Lemma 5.13 (Legendre)"
+      lean: "SmallRatio.pairing"
+      module: "Challenge"
+      status: "proved"
+    - source: "gcd(r_j, q_{j-1}) = 1 before Lemma 5.12"
+      lean: "SmallRatio.pairs_coprime"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proof of Theorem 5.14, one residue, with the number of steps"
+      lean: "SmallRatio.small_ratio"
+      module: "Challenge"
+      status: "proved"
+    - source: "Proof of Theorem 5.14, one residue"
+      lean: "SmallRatio.small_ratio_log"
+      module: "Challenge"
+      status: "proved"
+    - source: "Definition of S_H(p): sum over H of the per-residue sums"
+      lean: "SmallRatio.sum_over_set"
+      module: "Challenge"
+      status: "proved"
+    - source: "Theorem 5.14 (Dedekind-sum form: 12 sum_{h in H} s(h,p) = p S_H(p) + O(|H| log p))"
+      lean: "SmallRatio.small_ratio_subgroup"
+      module: "Challenge"
+      status: "proved"
+
+acknowledgements: "Lean 4 and Mathlib; Claude (Anthropic) for formalization assistance; the Palomar starter template for the check scripts."

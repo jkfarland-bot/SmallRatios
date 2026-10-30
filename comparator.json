@@ -1,0 +1,33 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "SmallRatio.reciprocity",
+    "SmallRatio.euclid_terminates",
+    "SmallRatio.euclid_identity",
+    "SmallRatio.euclid_congruence",
+    "SmallRatio.euclid_length",
+    "SmallRatio.along_euclid",
+    "SmallRatio.pairing",
+    "SmallRatio.pairs_coprime",
+    "SmallRatio.small_ratio",
+    "SmallRatio.small_ratio_log",
+    "SmallRatio.sum_over_set",
+    "SmallRatio.small_ratio_subgroup"
+  ],
+  "definition_names": [
+    "SmallRatio.sawtooth",
+    "SmallRatio.dedekindSum",
+    "SmallRatio.rem",
+    "SmallRatio.den",
+    "SmallRatio.steps",
+    "SmallRatio.smallRatioSum",
+    "SmallRatio.subgroupSmallRatio"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}
