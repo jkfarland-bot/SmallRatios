@@ -1,11 +1,18 @@
 # SmallRatio
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23801226.svg)](https://doi.org/10.5281/zenodo.23801226)
+
+Software archive: version v1.0 is [doi:10.5281/zenodo.23801227](https://doi.org/10.5281/zenodo.23801227);
+all versions are [doi:10.5281/zenodo.23801226](https://doi.org/10.5281/zenodo.23801226).
+
 Lean 4 / Mathlib formalization of the small-ratio formula for Dedekind sums, from J. S. Farland,
 *Mean squares of Dirichlet L-functions at s = 1 over characters of fixed order and over subgroups*
 (manuscript, 2026), Section 5.
 
 The companion paper is J. S. Farland, *The small-ratio formula for Dedekind sums, formalized in Lean*
-(preprint, Zenodo, 2026; DOI to be added).
+(preprint, Zenodo, 2026; v1.0
+[doi:10.5281/zenodo.23801363](https://doi.org/10.5281/zenodo.23801363), all versions
+[doi:10.5281/zenodo.23801362](https://doi.org/10.5281/zenodo.23801362)).
 
 For `0 < h < k` coprime let `r_0 = k`, `r_1 = h`, `r_{j+1} = r_{j-1} mod r_j` be the remainders of Euclid's
 algorithm, ending at `r_n = 1`, and `q_{-1} = 0`, `q_0 = 1`, `q_j = a_j q_{j-1} + q_{j-2}` the denominators of

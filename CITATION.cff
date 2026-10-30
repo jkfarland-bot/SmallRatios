@@ -6,6 +6,7 @@ authors:
     given-names: Joseph S.
     orcid: "https://orcid.org/0009-0007-6809-804X"
 version: v1.0
+doi: 10.5281/zenodo.23801226
 license: Apache-2.0
 repository-code: "https://github.com/jkfarland-bot/SmallRatios"
 keywords:
@@ -16,3 +17,15 @@ keywords:
   - Lean 4
   - Mathlib
   - formal verification
+preferred-citation:
+  type: article
+  title: "The small-ratio formula for Dedekind sums, formalized in Lean"
+  authors:
+    - family-names: Farland
+      given-names: Joseph S.
+      orcid: "https://orcid.org/0009-0007-6809-804X"
+  year: 2026
+  doi: 10.5281/zenodo.23801362
+  publisher:
+    name: Zenodo
+  notes: "Preprint, version v1.0: doi:10.5281/zenodo.23801363"
