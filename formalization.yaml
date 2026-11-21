@@ -154,7 +154,8 @@ review:
     - "Joseph S. Farland"
   notes: >-
     The definitions in Challenge.lean are copied verbatim from the development and compared by
-    Comparator. The statements and the companion paper were checked by an independent AI review, and
+    Comparator, bodies included: comparator.json lists no definition holes (earlier
+    releases listed the definitions as holes, so only their names and types were compared). The statements and the companion paper were checked by an independent AI review, and
     check/statements.py recomputes every statement numerically. No external referee has reviewed the
     manuscript or the formalization.
 

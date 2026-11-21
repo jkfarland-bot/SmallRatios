@@ -93,7 +93,10 @@ under the Apache License 2.0 (`LICENSE`); the paper is CC BY 4.0.
 - `Challenge.lean` is the statement surface to audit. It restates the definitions exactly as the
   development has them and states the 12 results with `sorry`.
 - `Solution.lean` proves the same declarations from the development in `SmallRatio/`.
-- `comparator.json` lists the compared theorems and definitions and the permitted axioms.
+- `comparator.json` lists the compared theorems and the permitted axioms. Its `definition_names`
+  is empty, so Comparator compares every definition the statements use with the development's,
+  bodies included (earlier releases listed the definitions as holes, which compares only their
+  names and types).
 - `formalization.yaml` records authorship, sources, AI assistance, scope and fidelity.
 - `scripts/` holds Palomar's checks, copied from the Palomar starter template.
 - `check/statements.py` recomputes every formalized statement numerically.

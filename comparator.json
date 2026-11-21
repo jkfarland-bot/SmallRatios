@@ -15,15 +15,7 @@
     "SmallRatio.sum_over_set",
     "SmallRatio.small_ratio_subgroup"
   ],
-  "definition_names": [
-    "SmallRatio.sawtooth",
-    "SmallRatio.dedekindSum",
-    "SmallRatio.rem",
-    "SmallRatio.den",
-    "SmallRatio.steps",
-    "SmallRatio.smallRatioSum",
-    "SmallRatio.subgroupSmallRatio"
-  ],
+  "definition_names": [],
   "permitted_axioms": [
     "propext",
     "Quot.sound",
