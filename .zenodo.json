@@ -1,0 +1,36 @@
+{
+  "title": "SmallRatio: a Lean 4 formalization of the small-ratio formula for Dedekind sums",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Farland, Joseph S.",
+      "orcid": "0009-0007-6809-804X"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "Dedekind sums",
+    "continued fractions",
+    "Dedekind reciprocity",
+    "Dirichlet L-functions",
+    "Lean 4",
+    "Mathlib",
+    "formal verification"
+  ],
+  "description": "<p>Lean 4 / Mathlib formalization accompanying J. S. Farland, \"The small-ratio formula for Dedekind sums, formalized in Lean\" (doi:10.5281/zenodo.23801362). For a prime p and 0 &lt; h &lt; p, the Dedekind sum s(h,p) is governed by the fractions of small height congruent to &plusmn;h: the development proves |12 s(h,p) &minus; p &Sigma; ([hv &equiv; u] &minus; [hv &equiv; &minus;u])/(uv)| &le; 12 log₂ p + 6, the sum running over the coprime pairs u, v &ge; 1 with uv &lt; p/2. Summed over a set H of residues, for instance a subgroup of odd order, this gives 12 &Sigma;_{h&isin;H} s(h,p) = p S_H(p) + O(|H| log p) with an explicit constant, where S_H(p) is the signed sum of 1/(uv) over the small fractions u/v in &plusmn;H; with the exact formula of Walum and of Louboutin and Munsch this gives M(p,H) = (&pi;&sup2;/6) S_H(p) + O(log p/m) for the mean square of L(1,&chi;) over the odd characters trivial on a subgroup H of odd order and index m. On the way it proves Dedekind reciprocity by counting lattice points, the identities of Euclid's algorithm with the bound n &le; 2 log₂ k + 1 on its length, the alternating-sum form 12 s(h,k) = &Sigma;_j (&minus;1)^{j+1} k/(r_j q_{j&minus;1}) + E with |E| &le; 4n, and Legendre's pairing of the small coprime pairs with the steps of the algorithm, by a lattice-basis argument.</p>\n<p>The statements are in Challenge.lean. Lean's comparator checks them against the proofs, with the definition bodies compared, and the proofs are replayed in the Lean, nanoda and con-ron kernels. No sorry, no native_decide; standard axioms only. The changes in each version are described in the release notes on GitHub: <a href=\"https://github.com/jkfarland-bot/SmallRatios/releases\">github.com/jkfarland-bot/SmallRatios/releases</a>.</p>",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23801362",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/jkfarland-bot/SmallRatios",
+      "relation": "isSupplementTo",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "AI assistance: the Lean code in this record was drafted and repaired by Claude (Anthropic), an AI model, from the statements and proofs of the companion paper \"The small-ratio formula for Dedekind sums, formalized in Lean\" (doi:10.5281/zenodo.23801362), and compiled locally with lake. Every proof is checked by the Lean kernel, and Comparator replays the solution against the statement file under the Lean, NanoDa and con-ron kernels. The author, Joseph S. Farland, chose the scope, directed the work, and is responsible for its content. No external human reviewer has checked the formalization."
+}
